@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Watch Movies Online</title>
+
+  <!-- TAB ICON (place favicon.png in same folder) -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <link rel="stylesheet" href="css/style.css">
+  SCRIPT AD POPUP
+
+</head>
+
+<body>
+    <br>
+  <!-- NOTE: Ad/redirect/3rd-party tracking scripts removed to avoid ad-block warnings and policy issues. -->
+<center>
+SCRIPT AD 60X468
+
+</center>
+  <h1 id="pageTitle">Watch Movies Online</h1>
+
+  <div class="player-container" id="playerBox">
+
+    <video id="mainVideo" poster="maintv.jpg" playsinline="">
+      <source src="media/video.mp4" type="video/mp4">
+    </video>
+
+    
+    
+<div class="play-btn" id="playButton"></div>
+    <div class="loader" id="loader"></div>
+
+    <!-- BOTTOM CONTROL BAR (Desktop only via CSS) -->
+    <div class="bottom-controls" id="bottomControls">
+      <!-- LEFT: Play/Pause + Volume -->
+      <div class="bottom-left">
+        <button class="icon-btn" id="playToggle" aria-label="Play/Pause" title="Play/Pause">
+          <svg id="playIcon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+            <!-- default: pause -->
+            <path d="M6 5h4v14H6V5zm8 0h4v14h-4V5z"></path>
+          </svg>
+        </button>
+
+        <button class="icon-btn" id="muteBtn" aria-label="Mute" title="Mute">
+          <svg id="volIcon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+            <path d="M3 10v4h4l5 4V6L7 10H3z"></path>
+            <path id="volWaves" d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89 1 5 3.77 5 6.71s-2.11 5.71-5 6.71v2.06c4.01-1.1 7-4.77 7-8.77s-2.99-7.67-7-8.77z"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- RIGHT: PiP + Fullscreen -->
+      <div class="bottom-right">
+        <button class="icon-btn" id="pipBtn" aria-label="Picture in Picture" title="Picture in Picture">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+            <path d="M19 7H5v10h14V7zm2-2v14H3V5h18z"></path>
+            <path d="M13 11h6v4h-6v-4z"></path>
+          </svg>
+        </button>
+
+        <button class="icon-btn" id="fullscreenBtn" aria-label="Fullscreen" title="Fullscreen">
+          <!-- Improved fullscreen icon -->
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+            <path d="M7 3H3v4h2V5h2V3zm14 0h-4v2h2v2h2V3zM5 17H3v4h4v-2H5v-2zm16 0h-2v2h-2v2h4v-4z"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- decorative streaks -->
+      <div class="streaks" aria-hidden="true"></div>
+    </div>
+  </div>
+
+
+
+  <!-- MOVIE DESCRIPTION -->
+  <section class="movie-details" aria-label="Movie description">
+  <div class="movie-card">
+    <p class="movie-tag" id="movieTag">Action • Thriller • 2026</p>
+    <h2 class="movie-title" id="movieTitle2">Watch Watch Movies Online</h2>
+    <p class="movie-synopsis" id="movieSynopsis">
+      A burned-out getaway driver is pulled back for one last job—only to discover the crew has been set up.
+      With a relentless task force closing in and a citywide blackout looming, the chase turns into a fight for survival.
+    </p>
+
+    <div class="movie-meta" role="list">
+      <div class="meta-item" role="listitem"><span class="meta-label">Quality</span><span class="meta-value" id="metaQuality">HD</span></div>
+      <div class="meta-item" role="listitem"><span class="meta-label">Year</span><span class="meta-value" id="metaYear">2026</span></div>
+      <div class="meta-item" role="listitem"><span class="meta-label">Runtime</span><span class="meta-value" id="metaRuntime">1h 54m</span></div>
+      <div class="meta-item" role="listitem"><span class="meta-label">IMDb</span><span class="meta-value" id="metaImdb">7.8</span></div>
+      <div class="meta-item" role="listitem"><span class="meta-label">Genre</span><span class="meta-value" id="metaGenre">Action</span></div>
+      <div class="meta-item" role="listitem"><span class="meta-label">Director</span><span class="meta-value" id="metaDirector">—</span></div>
+    </div>
+  </div>
+</section>
+<center>
+SCRIPT AD 250X300
+
+</center>
+<br>
+  <button class="watch-btn" id="watchNowBtn">DOWNLOAD FULL MOVIE</button>
+
+  
+  
+  <!-- POPUP -->
+  <div class="popup-overlay" id="signupPopup">
+    <div class="popup-box popup-movie" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+      <button class="popup-close" id="popupClose" aria-label="Close">×</button>
+
+      <div class="popup-header">
+        <div class="popup-brand">
+          <span class="brand-dot"></span>
+          <span class="brand-text">CINEMA+</span>
+        </div>
+        <div class="popup-lock">🔒 Secure checkout</div>
+      </div>
+
+      <h2 id="popupTitle">Create your account to watch</h2>
+      <p class="popup-sub">Unlimited movies in HD. Cancel anytime.</p>
+
+      <div class="plan-row" aria-label="Plan">
+        <div class="plan-badge">Most Popular</div>
+        <div class="plan-main">
+          <div class="plan-title">Premium Monthly</div>
+          <div class="plan-meta">HD • Subtitles • No ads</div>
+        </div>
+        <div class="plan-price">$2.99<span>/mo</span></div>
+      </div>
+
+      <form class="signup-form" id="signupForm">
+        <label class="field">
+          <span>Email</span>
+          <input type="email" placeholder="you@example.com" required="">
+        </label>
+
+        <label class="field">
+          <span>Password</span>
+          <input type="password" placeholder="Create a password" required="" minlength="6">
+        </label>
+
+        <button type="submit" id="signupBtn" class="watch-btn signup-primary">START WATCHING</button>
+
+        <div class="divider"><span>or continue with</span></div>
+
+        <div class="social-row">
+          <button type="button" class="social-btn" id="googleBtn" aria-label="Continue with Google">
+            <span class="social-icon">G</span><span>Google</span>
+          </button>
+          <button type="button" class="social-btn" id="emailBtn" aria-label="Continue with Facebook">
+            <span class="social-icon">@</span><span>Continue with Facebook</span>
+          </button>
+        </div>
+
+        <ul class="benefits" aria-label="Benefits">
+          <li>Instant access to <b id="movieNameInPopup">Watch Movies Online</b></li>
+          <li>Watch on mobile, TV, laptop</li>
+          <li>Cancel anytime in 1 click</li>
+        </ul>
+
+        <p class="fineprint">
+          By continuing, you agree to our <a href="#" onclick="return false;">Terms</a> and <a href="#" onclick="return false;">Privacy Policy</a>.
+        </p>
+      </form>
+    </div>
+  </div>
+
+
+  <script src="js/script.js"></script>
+
+
+  <footer class="site-footer">
+    © 2026 All rights reserved
+  </footer>
+HISTAT
+
+</body></html>
