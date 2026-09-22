@@ -249,3 +249,67 @@ document.getElementById("emailBtn")?.addEventListener("click", () => {
   const emailInput = document.querySelector('#signupForm input[type="email"]');
   emailInput?.focus();
 });
+
+/* =========================================
+   TMDB API - FILM INDIA POPULER
+========================================= */
+const TMDB_API_KEY = "892b7c8469f251441be840cf2aeb9d74";
+const bollywoodGrid = document.getElementById("bollywoodGrid");
+
+async function fetchBollywoodMovies() {
+  if (!bollywoodGrid) return;
+
+  try {
+    // Fetch popular Indian movies (with_original_language=hi)
+    const url = `https://api.themoviedb.org/3/discover/movie?api_key=${TMDB_API_KEY}&with_original_language=hi&sort_by=popularity.desc&page=1`;
+    const res = await fetch(url);
+    const data = await res.json();
+
+    if (!data.results || data.results.length === 0) {
+      bollywoodGrid.innerHTML = '<div class="bollywood-loading">Tidak ada film ditemukan.</div>';
+      return;
+    }
+
+    // Ambil 8 film pertama
+    const movies = data.results.slice(0, 8);
+    bollywoodGrid.innerHTML = ""; // Clear loading
+
+    movies.forEach(movie => {
+      const posterPath = movie.poster_path
+        ? `https://image.tmdb.org/t/p/w300${movie.poster_path}`
+        : 'https://placehold.co/300x450/1a1a1a/ffffff?text=No+Poster';
+
+      const rating = movie.vote_average ? movie.vote_average.toFixed(1) : "N/A";
+      const title = movie.title || movie.original_title || "Untitled";
+
+      // Buat bintang berdasarkan rating (skala 0-10, kita konversi ke 5 bintang)
+      const starCount = Math.round(rating / 2); // 8.5 -> 4.25 -> 4 bintang
+      let starsHTML = "";
+      for (let i = 1; i <= 5; i++) {
+        const fill = i <= starCount ? "#f5c518" : "#444";
+        starsHTML += `<svg viewBox="0 0 24 24" width="14" height="14" fill="${fill}"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>`;
+      }
+
+      const card = document.createElement("div");
+      card.className = "bollywood-card";
+      card.innerHTML = `
+        <div class="bollywood-poster">
+          <img src="${posterPath}" alt="${title} Poster" loading="lazy">
+        </div>
+        <h4 class="bollywood-title">${title}</h4>
+        <div class="bollywood-rating">
+          ${starsHTML}
+          <span>${rating}</span>
+        </div>
+      `;
+      bollywoodGrid.appendChild(card);
+    });
+
+  } catch (err) {
+    console.error("TMDB fetch error:", err);
+    bollywoodGrid.innerHTML = '<div class="bollywood-loading">Gagal memuat data film.</div>';
+  }
+}
+
+// Panggil fungsi saat halaman selesai load
+document.addEventListener("DOMContentLoaded", fetchBollywoodMovies);
