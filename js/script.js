@@ -271,7 +271,7 @@ async function fetchBollywoodMovies() {
     }
 
     // Ambil 8 film pertama
-    const movies = data.results.slice(0, 8);
+    const movies = data.results.slice(0, 6);
     bollywoodGrid.innerHTML = ""; // Clear loading
 
     movies.forEach(movie => {
