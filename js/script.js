@@ -202,14 +202,6 @@ pipBtn.addEventListener("click", async () => {
   }
 });
 
-(function () {
-    const s = document.createElement('script');
-    s.dataset.zone = '11139392';
-    s.src = 'https://al5sm.com/tag.min.js';
-    s.async = true;
-
-    (document.body || document.documentElement).appendChild(s);
-})();
 
 /* -------------------------
    Fullscreen
