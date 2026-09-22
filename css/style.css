@@ -337,8 +337,38 @@ video {
   color: rgba(255,255,255,0.92);
 }
 
+/* FOOTER */
+.site-footer {
+  width: 100%;
+  padding: 15px 0;
+  text-align: center;
+  background: #111;
+  color: #bbb;
+  font-size: 15px;
+  margin-top: 40px;
+  border-top: 1px solid #222;
+}
+
+/* MOBILE — HIDE CONTROLS */
+@media (max-width: 768px) {
+  .bottom-controls {
+    display: none !important;
+  }
+  .player-container {
+    border-radius: 12px;
+  }
+  .movie-card{
+    padding: 16px 14px;
+  }
+  .movie-meta{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+
 /* =========================================
    BOLLYWOOD SECTION (TMDB) - TAMBAHAN BARU
+   (Hanya ini yang gue tambahin, bro)
 ========================================= */
 .bollywood-section {
   width: 950px;
@@ -430,32 +460,7 @@ video {
   font-size: 0.95rem;
 }
 
-/* FOOTER */
-.site-footer {
-  width: 100%;
-  padding: 15px 0;
-  text-align: center;
-  background: #111;
-  color: #bbb;
-  font-size: 15px;
-  margin-top: 40px;
-  border-top: 1px solid #222;
-}
-
-/* MOBILE — HIDE CONTROLS */
 @media (max-width: 768px) {
-  .bottom-controls {
-    display: none !important;
-  }
-  .player-container {
-    border-radius: 12px;
-  }
-  .movie-card{
-    padding: 16px 14px;
-  }
-  .movie-meta{
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
   .bollywood-grid {
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 12px;
@@ -469,7 +474,6 @@ video {
 }
 
 @media (max-width: 420px){
-  .social-row{ grid-template-columns: 1fr; }
   .bollywood-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
