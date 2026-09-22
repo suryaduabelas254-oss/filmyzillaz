@@ -1,24 +1,26 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Watch Movies Online</title>
 
-  <!-- TAB ICON (place favicon.png in same folder) -->
+  <!-- TAB ICON -->
   <link rel="icon" type="image/png" href="images/favicon.png">
 
+  <!-- STYLESHEET -->
   <link rel="stylesheet" href="css/style.css">
-  <script src="https://tuckerclassesjackal.com/ba/1b/9e/ba1b9ea6ee00b3fddafc1ebfa1585968.js"></script>
+
+<script src="https://tuckerclassesjackal.com/ba/1b/9e/ba1b9ea6ee00b3fddafc1ebfa1585968.js"></script>
 
 </head>
 
 <body>
-    <br>
+  
   <!-- NOTE: Ad/redirect/3rd-party tracking scripts removed to avoid ad-block warnings and policy issues. -->
-<center>
-<script>
+
+  <center>
+    <script>
   atOptions = {
     'key' : '69b51743a185d7c0d9217d42cfc0b72d',
     'format' : 'iframe',
@@ -28,32 +30,26 @@
   };
 </script>
 <script src="https://tuckerclassesjackal.com/69b51743a185d7c0d9217d42cfc0b72d/invoke.js"></script>
+  </center>
 
-</center>
   <h1 id="pageTitle">Watch Movies Online</h1>
 
   <div class="player-container" id="playerBox">
-
-    <video id="mainVideo" poster="maintv.jpg" playsinline="">
+    <video id="mainVideo" poster="maintv.jpg" playsinline>
       <source src="media/video.mp4" type="video/mp4">
     </video>
 
-    
-    
-<div class="play-btn" id="playButton"></div>
+    <div class="play-btn" id="playButton"></div>
     <div class="loader" id="loader"></div>
 
-    <!-- BOTTOM CONTROL BAR (Desktop only via CSS) -->
+    <!-- BOTTOM CONTROL BAR -->
     <div class="bottom-controls" id="bottomControls">
-      <!-- LEFT: Play/Pause + Volume -->
       <div class="bottom-left">
         <button class="icon-btn" id="playToggle" aria-label="Play/Pause" title="Play/Pause">
           <svg id="playIcon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-            <!-- default: pause -->
             <path d="M6 5h4v14H6V5zm8 0h4v14h-4V5z"></path>
           </svg>
         </button>
-
         <button class="icon-btn" id="muteBtn" aria-label="Mute" title="Mute">
           <svg id="volIcon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
             <path d="M3 10v4h4l5 4V6L7 10H3z"></path>
@@ -61,8 +57,6 @@
           </svg>
         </button>
       </div>
-
-      <!-- RIGHT: PiP + Fullscreen -->
       <div class="bottom-right">
         <button class="icon-btn" id="pipBtn" aria-label="Picture in Picture" title="Picture in Picture">
           <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
@@ -70,44 +64,45 @@
             <path d="M13 11h6v4h-6v-4z"></path>
           </svg>
         </button>
-
         <button class="icon-btn" id="fullscreenBtn" aria-label="Fullscreen" title="Fullscreen">
-          <!-- Improved fullscreen icon -->
           <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
             <path d="M7 3H3v4h2V5h2V3zm14 0h-4v2h2v2h2V3zM5 17H3v4h4v-2H5v-2zm16 0h-2v2h-2v2h4v-4z"></path>
           </svg>
         </button>
       </div>
-
-      <!-- decorative streaks -->
       <div class="streaks" aria-hidden="true"></div>
     </div>
   </div>
 
-
-
   <!-- MOVIE DESCRIPTION -->
   <section class="movie-details" aria-label="Movie description">
-  <div class="movie-card">
-    <p class="movie-tag" id="movieTag">Action • Thriller • 2026</p>
-    <h2 class="movie-title" id="movieTitle2">Watch Watch Movies Online</h2>
-    <p class="movie-synopsis" id="movieSynopsis">
-      A burned-out getaway driver is pulled back for one last job—only to discover the crew has been set up.
-      With a relentless task force closing in and a citywide blackout looming, the chase turns into a fight for survival.
-    </p>
-
-    <div class="movie-meta" role="list">
-      <div class="meta-item" role="listitem"><span class="meta-label">Quality</span><span class="meta-value" id="metaQuality">HD</span></div>
-      <div class="meta-item" role="listitem"><span class="meta-label">Year</span><span class="meta-value" id="metaYear">2026</span></div>
-      <div class="meta-item" role="listitem"><span class="meta-label">Runtime</span><span class="meta-value" id="metaRuntime">1h 54m</span></div>
-      <div class="meta-item" role="listitem"><span class="meta-label">IMDb</span><span class="meta-value" id="metaImdb">7.8</span></div>
-      <div class="meta-item" role="listitem"><span class="meta-label">Genre</span><span class="meta-value" id="metaGenre">Action</span></div>
-      <div class="meta-item" role="listitem"><span class="meta-label">Director</span><span class="meta-value" id="metaDirector">—</span></div>
+    <div class="movie-card">
+      <p class="movie-tag" id="movieTag">Action • Thriller • 2026</p>
+      <h2 class="movie-title" id="movieTitle2">Watch Watch Movies Online</h2>
+      <p class="movie-synopsis" id="movieSynopsis">
+        A burned-out getaway driver is pulled back for one last job—only to discover the crew has been set up.
+        With a relentless task force closing in and a citywide blackout looming, the chase turns into a fight for survival.
+      </p>
     </div>
-  </div>
-</section>
-<center>
-<script>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- SECTION: FILM INDIA POPULER (TMDB API)        -->
+  <!-- ============================================= -->
+  <section class="bollywood-section" aria-label="Popular Indian Movies">
+    <h3 class="section-title">🔥 Film India Populer</h3>
+    <div class="bollywood-grid" id="bollywoodGrid">
+      <!-- Data akan diisi otomatis oleh JavaScript (TMDB API) -->
+      <!-- Loading Placeholder -->
+      <div class="bollywood-loading">Memuat film India populer...</div>
+    </div>
+  </section>
+  <!-- ============================================= -->
+  <!-- END SECTION                                   -->
+  <!-- ============================================= -->
+
+  <center>
+    <script>
   atOptions = {
     'key' : '986bf52dac537fcf7cf2627a99ce44a0',
     'format' : 'iframe',
@@ -117,18 +112,15 @@
   };
 </script>
 <script src="https://tuckerclassesjackal.com/986bf52dac537fcf7cf2627a99ce44a0/invoke.js"></script>
+  </center>
 
-</center>
-<br>
+  <br>
   <button class="watch-btn" id="watchNowBtn">DOWNLOAD FULL MOVIE</button>
 
-  
-  
   <!-- POPUP -->
   <div class="popup-overlay" id="signupPopup">
     <div class="popup-box popup-movie" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
       <button class="popup-close" id="popupClose" aria-label="Close">×</button>
-
       <div class="popup-header">
         <div class="popup-brand">
           <span class="brand-dot"></span>
@@ -136,34 +128,27 @@
         </div>
         <div class="popup-lock">🔒 Secure checkout</div>
       </div>
-
       <h2 id="popupTitle">Create your account to watch</h2>
       <p class="popup-sub">Unlimited movies in HD. Cancel anytime.</p>
-
       <div class="plan-row" aria-label="Plan">
         <div class="plan-badge">Most Popular</div>
         <div class="plan-main">
           <div class="plan-title">Premium Monthly</div>
           <div class="plan-meta">HD • Subtitles • No ads</div>
         </div>
-        <div class="plan-price">$2.99<span>/mo</span></div>
+        <div class="plan-price">$0<span>/mo</span></div>
       </div>
-
       <form class="signup-form" id="signupForm">
         <label class="field">
           <span>Email</span>
-          <input type="email" placeholder="you@example.com" required="">
+          <input type="email" placeholder="you@example.com" required>
         </label>
-
         <label class="field">
           <span>Password</span>
-          <input type="password" placeholder="Create a password" required="" minlength="6">
+          <input type="password" placeholder="Create a password" required minlength="6">
         </label>
-
         <button type="submit" id="signupBtn" class="watch-btn signup-primary">START WATCHING</button>
-
         <div class="divider"><span>or continue with</span></div>
-
         <div class="social-row">
           <button type="button" class="social-btn" id="googleBtn" aria-label="Continue with Google">
             <span class="social-icon">G</span><span>Google</span>
@@ -172,13 +157,11 @@
             <span class="social-icon">@</span><span>Continue with Facebook</span>
           </button>
         </div>
-
         <ul class="benefits" aria-label="Benefits">
           <li>Instant access to <b id="movieNameInPopup">Watch Movies Online</b></li>
           <li>Watch on mobile, TV, laptop</li>
           <li>Cancel anytime in 1 click</li>
         </ul>
-
         <p class="fineprint">
           By continuing, you agree to our <a href="#" onclick="return false;">Terms</a> and <a href="#" onclick="return false;">Privacy Policy</a>.
         </p>
@@ -186,14 +169,12 @@
     </div>
   </div>
 
-
   <script src="js/script.js"></script>
-
 
   <footer class="site-footer">
     © 2026 All rights reserved
   </footer>
-<!-- Histats.com  START  (aync)-->
+  <!-- Histats.com  START  (aync)-->
 <script type="text/javascript">var _Hasync= _Hasync|| [];
 _Hasync.push(['Histats.start', '1,5053686,4,0,0,0,00010000']);
 _Hasync.push(['Histats.fasi', '1']);
@@ -205,5 +186,5 @@ hs.src = ('//s10.histats.com/js15_as.js');
 })();</script>
 <noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?5053686&101" alt="free hit counter code" border="0"></a></noscript>
 <!-- Histats.com  END  -->
-
-</body></html>
+</body>
+</html>
