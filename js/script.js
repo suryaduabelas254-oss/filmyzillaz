@@ -261,7 +261,7 @@ async function fetchBollywoodMovies() {
 
   try {
     // Fetch popular Indian movies (with_original_language=hi)
-    const url = `https://api.themoviedb.org/3/discover/movie?api_key=${TMDB_API_KEY}&with_original_language=hi&sort_by=popularity.desc&page=1`;
+    const url = `https://api.themoviedb.org/3/discover/movie?api_key=${TMDB_API_KEY}&with_original_language=en&sort_by=popularity.desc&page=1`;
     const res = await fetch(url);
     const data = await res.json();
 
